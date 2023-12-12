@@ -1,0 +1,15 @@
+<div id="leaf">
+  <div *ngFor="let leafNode of leafNodes; let index = index" class="leaf-node leaf-node-{{index}}">
+
+    <div class="leaf-keys">
+      <div *ngFor="let key of leafNode.keys" class="leaf-key">
+        <div>{{key}}</div>
+      </div>
+    </div>
+<!--    <div class="leaf-values">-->
+<!--      <div *ngFor="let value of leafNode.values" class="leaf-value">-->
+<!--        <div>{{value}}</div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+</div>

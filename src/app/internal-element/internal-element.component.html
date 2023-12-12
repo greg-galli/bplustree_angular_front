@@ -1,0 +1,15 @@
+<div *ngFor="let item of internalNodes; let index = index" class="internal-node internal-node-item-{{index}}">
+  <div *ngFor="let key of item.keys; let index = index" class="key key-{{index}}">
+    <div class="internal-item-key-name">{{key}}</div>
+  </div>
+</div>
+<div *ngFor="let item of internalNodes;">
+  <div *ngFor="let child of item.children; let isFirst = first">
+    <div *ngIf="child.nodeType === 'InternalNode'">
+      <app-internal-element [internalNodes]="item.children"></app-internal-element>
+    </div>
+    <div *ngIf="child.nodeType === 'LeafNode' && isFirst">
+      <app-leaf-element [leafNodes]="item.children"></app-leaf-element>
+    </div>
+  </div>
+</div>

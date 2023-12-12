@@ -1,0 +1,14 @@
+#root {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  .root-item
+  {
+    margin: 10px;
+    padding: 20px 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+  }
+}
